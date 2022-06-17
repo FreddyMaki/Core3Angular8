@@ -1,4 +1,8 @@
 <p>encryption works!</p>
+<h4>
+  #Angular #dotnet #RSA #private #public #key
+  In this video, I have shown how to use RSA in Angular to encrypt little data and Decrypting the encrypted text in .net c# web API.
+</h4>
 Students:{{Students[0].name}}
 <div class="row">
   <div class="col-md-4">
@@ -21,7 +25,7 @@ Students:{{Students[0].name}}
       </div>
       <span class="btn btn-success" (click)="login()">Login</span> <br />
       <span class="btn btn-success" (click)="encrypt()">Encrypt</span> <br />
-     
+
 
     </div>
 
@@ -34,3 +38,54 @@ Students:{{Students[0].name}}
     </div>
   </div>
 </div>
+<hr />
+
+<h4>AES Encryption/Decryption With Angular, this is used to encrypt big data</h4>
+<h3>Angular : Achieving payload encryption with Forge | Node-Forge</h3>
+<br>
+<div>
+  <div class="row">
+    <div class="col-sm-6">
+      <button type="button" class="btn btn-primary btn-lg btn-block">
+        Encryption
+      </button>
+      <br>
+      <div class="form-group">
+        <label for="txtTextToConvert">Plain Text</label>
+        <input type="text" class="form-control" placeholder="Enter text you want to encrypt" [(ngModel)]="plainText">
+      </div>
+
+      <div class="form-group">
+        <label for="txtPassword">Password</label>
+        <input type="password" class="form-control" placeholder="Enter encryption password" [(ngModel)]="encPassword">
+      </div>
+      <textarea class="form-control" readonly rows="3">{{conversionEncryptOutput}}</textarea>
+      <br>
+      <button type="button" class="btn btn-success float-right" (click)="convertText('encrypt')">Encrypt</button>
+    </div>
+    <div class="col-sm-6">
+      <button type="button" class="btn btn-dark btn-lg btn-block">
+        Decryption
+      </button>
+      <br>
+      <div class="form-group">
+        <label for="txtTextToConvert">Encrypted Text</label>
+        <input type="text" class="form-control" placeholder="Enter text you want to decrypt" [(ngModel)]="encryptText">
+      </div>
+
+      <div class="form-group">
+        <label for="txtPassword">Password</label>
+        <input type="password" class="form-control" placeholder="Enter decryption password" [(ngModel)]="decPassword">
+      </div>
+      <textarea class="form-control" readonly rows="3">{{conversionDecryptOutput}}</textarea>
+      <br>
+      <button type="button" class="btn btn-success float-right" (click)="convertText('decrypt')">Decrypt</button>
+    </div>
+  </div>
+</div>
+
+<hr />
+<h3>Angular : Achieving payload encryption with Forge | Node-Forge</h3>
+<button type="button" class="btn btn-success float-right" (click)="Encrypt()">Encrypt</button>
+
+

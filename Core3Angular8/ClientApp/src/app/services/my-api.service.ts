@@ -30,4 +30,8 @@ export class MyApiService {
     return this.http.put(url, body, new HttpModels.GetJsonOptions(null, options));
   }
 
+  postEncryptedData(url: string,AESEncryptedBody: any, options?: HttpModels.OptionOverrides): Observable<any> {
+    return this.http.post(url , AESEncryptedBody, new HttpModels.GetJsonOptions(null, options));
+  }
+
 }

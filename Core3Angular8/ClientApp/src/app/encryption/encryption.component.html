@@ -41,7 +41,7 @@ Students:{{Students[0].name}}
 <hr />
 
 <h4>AES Encryption/Decryption With Angular, this is used to encrypt big data</h4>
-<h3>Angular : Achieving payload encryption with Forge | Node-Forge</h3>
+
 <br>
 <div>
   <div class="row">
@@ -85,7 +85,33 @@ Students:{{Students[0].name}}
 </div>
 
 <hr />
-<h3>Angular : Achieving payload encryption with Forge | Node-Forge</h3>
-<button type="button" class="btn btn-success float-right" (click)="Encrypt()">Encrypt</button>
+<h3>Angular : Achieving payload encryption with CryptoJS AES With key and IV</h3>
+<h3>Encrypt in JavaScript and Decrypt in C# With AES Algorithm</h3>
 
+<div class="row">
+  <div class="col-sm-6">
+    <button type="button" class="btn btn-primary btn-lg btn-block">
+      Encryption
+    </button>
+    <br>
+    <div class="form-group">
+      <label for="txtTextToConvert">Username</label>
+      <input type="text" class="form-control" placeholder="Enter text you want to encrypt" [(ngModel)]="username">
+    </div>
+
+    <div class="form-group">
+      <label for="txtPassword">Password</label>
+      <input type="password" class="form-control" placeholder="Enter encryption password" [(ngModel)]="password">
+    </div>
+    AES Encryption
+    <textarea class="form-control" readonly rows="3">Encrypted username:{{encryptedlogin}}, Encrypted pass:{{encryptedPassword}}</textarea>
+    RSA Encryption
+    <textarea class="form-control" readonly rows="3">Encrypted key:{{encryptedKey}}, Encrypted IV:{{encryptedIV}}</textarea>
+
+    <br>
+    <button type="button" class="btn btn-success" (click)="encrypt2()">Encrypt</button>
+    <button type="button" class="btn btn-success" (click)="send()">Send</button>
+  </div>
+</div>
+<hr />
 

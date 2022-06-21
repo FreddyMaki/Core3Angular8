@@ -12,7 +12,7 @@
   <li><strong>Efficient production builds</strong>. In production mode, development-time features are disabled, and your <code>dotnet publish</code> configuration automatically invokes <code>ng build</code> to produce minified, ahead-of-time compiled JavaScript files.</li>
 </ul>
 <p>The <code>ClientApp</code> subdirectory is a standard Angular CLI application. If you open a command prompt in that directory, you can run any <code>ng</code> command (e.g., <code>ng test</code>), or use <code>npm</code> to install extra packages into it.</p>-->
-<table *ngIf="Students && Students.length > 0" >
+<table *ngIf="Students && Students.length > 0">
   <thead>
     <tr>
       <th>Serial</th>
@@ -33,15 +33,35 @@
 </table>
 <br>
 <p>Angular CRUD operation, PUT, GET DELETE...</p>
-<button (click)="postData()" >Execute http Post</button>
+<button (click)="postData()">Execute http Post</button>
 {{retPostData}}
 <hr>
 <br>
-<button (click)="getData()" >Execute http Get</button>
+<button (click)="getData()">Execute http Get</button>
 {{retGetData}}
 <hr>
-<button (click)="putData()" >Execute http Put</button>
+<button (click)="putData()">Execute http Put</button>
 {{retPutData}}
 <hr>
-<button (click)="deleteData()" >Execute http Delete</button>
+<button (click)="deleteData()">Execute http Delete</button>
 {{retPutData}}
+<hr />
+
+<h4>Angular Directive: Attribute Directives</h4>
+<h4>
+  Create a myHighlight attribute directive to set an element’s background color when you hovers over that element.
+  It can be applied anywhere
+</h4>
+<h1 highlight >My First Attribute Directive</h1>
+
+<h4>Pick a highlight color</h4>
+
+<div>
+  <input type="radio" name="colors" (click)="color='lightgreen'">Green
+  <input type="radio" name="colors" (click)="color='yellow'">Yellow
+  <input type="radio" name="colors" (click)="color='cyan'">Cyan
+</div>
+<p [highlight]="color">Highlight me!</p>
+<p [highlight]="color" defaultColor="Violet" > Highlight me too!</p>
+
+

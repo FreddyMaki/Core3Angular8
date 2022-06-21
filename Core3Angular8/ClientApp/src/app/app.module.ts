@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { EncryptionComponent } from './encryption/encryption.component';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { EncryptionComponent } from './encryption/encryption.component';
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    EncryptionComponent
+    EncryptionComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

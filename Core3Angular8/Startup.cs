@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
+
 namespace Core3Angular8
 {
 	public class Startup
@@ -21,6 +22,7 @@ namespace Core3Angular8
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
+			
 			services.AddControllersWithViews();
 			// In production, the Angular files will be served from this directory
 			services.AddSpaStaticFiles(configuration =>
@@ -31,6 +33,8 @@ namespace Core3Angular8
 
 			///////ADD RSA///////
 			//services.AddScoped<IRsaHelper, RsaHelper>();
+			///MY REPEATING SERVICE
+			services.AddHostedService<RepeatingService>();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
